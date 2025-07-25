@@ -1,0 +1,68 @@
+* {
+	background-image: none;
+	box-shadow: none;
+}
+
+
+window {
+	background-color: rgba(0, 0, 0, 0.521);
+}
+
+@keyframes grow {
+  from {
+    padding: 20px;
+    background-size: 25%;
+  }
+  to {
+    padding: 26px;
+    background-size: 30%;
+  }
+}
+
+@keyframes shrink {
+  from {
+    padding: 26px;
+    background-size: 30%;
+  }
+  to {
+    padding: 20px;
+    background-size: 25%;
+  }
+}
+
+button {
+    border-radius: 10;
+    border-color: black;
+	text-decoration-color: #FDF500;
+    color: #FDF500;
+	background-color: rgba(8, 37, 54, 0.8);
+	border-style: solid;
+	margin:20px;
+	border-width: 0px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25%;
+	  animation-name: shrink;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  font-size: 20;
+  font-family: "Adwaita Mono Regular";
+}
+button:hover {
+  background-color: #FDF500;
+  color: rgb(8, 37, 54);
+  animation-name: grow;
+}
+
+#lock {
+    background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+}
+
+#shutdown {
+    background-image: image(url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+}
+
+#reboot {
+    background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+}

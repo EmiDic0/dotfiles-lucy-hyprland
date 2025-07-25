@@ -1,0 +1,140 @@
+/**
+ * ROFI Color theme
+ * User: Qball
+ * Copyright: Dave Davenport
+ */
+
+* {
+    background-color: transparent; 
+    // Bold, Italic, Underline
+    highlight:     bold #ffffff;
+}
+window {
+    background-color: #082536CC;
+    border-color:     transparent;
+    border-radius:    10;
+
+    padding: 10;
+
+    height:   750;
+    width:    750;
+    border:  0;
+    text-color: #FDF500;
+
+
+    location: center;
+    anchor:   center;
+}
+inputbar {
+    background-color: transparent;
+    text-color:       #FDF500;
+    children: [prompt, entry];
+    spacing: 0mm;
+}
+prompt {
+  border-radius: 10;
+  width: 15mm;
+}
+textbox-end {
+  border-radius: 10;
+  width: 15mm;
+  expand: false;
+}
+entry {
+  background-color: transparent;
+}
+prompt, entry, textbox-end, num-filtered-rows {
+  background-color: transparent;
+  text-color: inherit;
+  padding: 2mm;
+  vertical-align: 0.5;
+}
+element {
+    border-radius: 10;
+    children: [element-icon];
+}
+textbox-current-entry {
+    border-radius: 10;
+    background-color: #082536CC;
+    text-color: #FDF500;
+    placeholder: "n/a";
+    padding: 2mm;
+    horizontal-align: 0.5;
+  }
+element-icon {
+  expand: true;
+  size: 10mm;
+  vertial-align: 0.5;
+  horizontal-align: 0.5;
+  padding: 2mm;
+}
+mode-switcher{
+    spacing: 20;
+}
+
+button {
+    padding: 10;
+    text-color: #FDF500;
+    background-color: transparent;
+}
+
+button selected {
+    border-radius: 10;
+    background-color: #FDF500;
+    text-color: #082536;
+}
+
+mainbox {
+    expand: true;
+    background-color: #082536CC;
+    spacing:  5mm;
+    children: [
+                inputbar,
+                mode-switcher,
+                listview,
+                icon-current-entry,
+                textbox-current-entry
+    ];
+}
+icon-current-entry {
+    size: 100mm;
+  }
+listview {
+    padding: 0em;
+    dynamic: false;
+    lines: 0;
+    columns: 8;
+    flow: horizontal;
+}
+element selected  normal {
+    background-color: #FDF500;
+}
+element normal active {
+    text-color: #FDF500;
+}
+element normal urgent {
+    text-color: red;
+}
+element alternate normal {
+}
+element alternate active {
+    text-color: #FDF500;
+}
+element alternate urgent {
+    text-color: #FDF500;
+}
+element selected active {
+    background-color: #FDF500;
+    text-color: #082536CC;
+}
+element selected urgent {
+    background-color: #FDF500;
+    text-color: #082536CC;
+}
+error-message {
+    expand: true;
+    background-color: red;
+    border-color: darkred;
+    border: 0px;
+    padding: 1em;
+}

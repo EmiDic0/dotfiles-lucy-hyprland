@@ -1,0 +1,23 @@
+{
+    "label" : "lock",
+    "action" : "hyprlock",
+    "keybind" : "l",
+        "height" : 0.5,
+    "width" : 1
+    
+}
+
+{
+    "label" : "shutdown",
+    "action" : "systemctl poweroff",
+    "keybind" : "s",
+        "height" : 1,
+    "width" : 1
+}
+{
+    "label" : "reboot",
+    "action" : "systemctl reboot",
+    "keybind" : "r",
+    "height" : 1,
+    "width" : 1
+}
